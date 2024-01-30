@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>AkankshAI</title>
+</head>
+<body>
+
+<div class="app">
+  <p id="loading">Loading...</p>
+  <img
+    id="photo"
+    src="images/akankshai.svg"
+    alt="Akankshai Logo"
+    class="photo hidden"
+    onload="handleImageLoad()"
+  />
+  <div id="caption" class="caption hidden">
+    <p class="main-text fade-in">Where Expectations Meet Reality</p>
+    <p class="sub-text slide-up">Coming Soon...</p>
+  </div>
+</div>
+
+<script>
+  function handleImageLoad() {
+    document.getElementById('loading').style.display = 'none';
+    document.getElementById('photo').classList.remove('hidden');
+    document.getElementById('caption').classList.remove('hidden');
+  }
+</script>
+
+</body>
+</html>
