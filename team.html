@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team</title>
+
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
+
+    <!-- CSS -->
+    <style>
+        /* ------------ GOOGLE FONTS ------------ */
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+        /* ------------ VARIABLES ------------ */
+        :root {
+            /* FONT */
+            --font: 'Poppins', sans-serif;
+
+            /* COLORS */
+            --color: #407BFF;
+            --bg-color: #f4f4f4;
+        }
+
+        /* ------------ BASE ------------ */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+            background-image: url("../assets/BG.svg");
+            background-size: 100%;
+            background-color: var(--bg-color);
+            position: relative;
+        }
+
+        /* ----------- SLIDER ------------ */
+        .swiper {
+            width: 100%;
+            margin-top: 2em;
+        }
+
+        .swiper-wrapper {
+            width: 100%;
+            height: 35em;
+            display: flex;
+            align-items: center;
+        }
+
+        .card {
+            width: 20em;
+            height: 90%;
+            background-color: #fff;
+            border-radius: 2em;
+            box-shadow: 0 0 2em rgba(0, 0, 0, .2);
+            padding: 2em 1em;
+
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+
+            margin: 0 2em;
+        }
+
+        .swiper-slide:not(.swiper-slide-active) {
+            filter: blur(1px);
+        }
+
+        .card__image {
+            width: 10em;
+            height: 10em;
+            border-radius: 50%;
+            border: 5px solid var(--color);
+            padding: 3px;
+            margin-bottom: 2em;
+        }
+
+        .card__image img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .card__content {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .card__title {
+            font-size: 1.5rem;
+            font-weight: 500;
+            position: relative;
+            top: .2em;
+        }
+
+        .card__name {
+            color: var(--color);
+            text-align: center;
+        }
+
+        .card__text {
+            text-align: center;
+            font-size: 1.1rem;
+            margin: 1em 0;
+        }
+
+        .card__btn {
+            background-color: var(--color);
+            color: #fff;
+            font-size: 1rem;
+            text-transform: uppercase;
+            font-weight: 600;
+            border: none;
+            padding: .5em;
+            border-radius: .5em;
+            margin-top: .5em;
+            cursor: pointer;
+        }
+
+        a.navb {
+            color: #407bff;
+            font-size: 20px;
+            position: absolute;
+            top: 1em;
+            left: 1em;
+            text-decoration: none;
+        }
+
+        a.navb:hover {
+            color: #000000;
+        }
+    </style>
+
+</head>
+<body>
+
+<a href="index.html" class="navb">Go Back</a>
+
+<section class="swiper mySwiper">
+
+    <div class="swiper-wrapper">
+
+        <!-- Card 1 -->
+        <div class="card swiper-slide">
+            <div class="card__image">
+                <img src="/images/MJ.jpg" alt="card image">
+            </div>
+
+            <div class="card__content">
+                <span class="card__title">Mayank Jaiswal</span>
+                <span class="card__name">Team Lead, Full Stack and AI developer</span>
+                <p class="card__text"> Expert in collaborative solutions, merging Full Stack and AI for success.</p>
+                <button class="card__btn">View More</button>
+            </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="card swiper-slide">
+            <div class="card__image">
+                <img src="/images/KK.jpeg" alt="card image">
+            </div>
+
+            <div class="card__content">
+                <span class="card__title">Kshitij Kashyap</span>
+                <span class="card__name">Content Lead, Frontend Developer and Designer</span>
+                <p class="card__text">Crafting  content, AI solutions, and designs for engaging experiences</p>
+                <button class="card__btn">View More</button>
+            </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="card swiper-slide">
+            <div class="card__image">
+                <img src="/images/HK.png" alt="card image">
+            </div>
+
+            <div class="card__content">
+                <span class="card__title">Harshita Khare</span>
+                <span class="card__name">Frontend Developer and Designer</span>
+                <p class="card__text">Crafting immersive digital experiences with innovative frontend and aesthetic design.</p>
+                <button class="card__btn">View More</button>
+            </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="card swiper-slide">
+            <div class="card__image">
+                <img src="/images/KS.jpg" alt="card image">
+            </div>
+
+            <div class="card__content">
+                <span class="card__title">Khushi Sonkusare</span>
+                <span class="card__name">Design Lead, Frontend Developer and Designer</span>
+                <p class="card__text">Design Lead crafting seamless landscapes with tech expertise.</p>
+                <button class="card__btn">View More</button>
+            </div>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="card swiper-slide">
+            <div class="card__image">
+                <img src="/images/DP.jpg" alt="card image">
+            </div>
+
+            <div class="card__content">
+                <span class="card__title">Devesh Pardhi</span>
+                <span class="card__name">Backend and AI developer</span>
+                <p class="card__text">Integrating backend and AI for seamless efficiency and innovation.</p>
+                <button class="card__btn">View More</button>
+            </div>
+        </div>
+
+        <!-- Add more cards as needed -->
+
+    </div>
+</section>
+
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+<!-- Initialize Swiper -->
+<script>
+    var swiper = new Swiper(".mySwiper", {
+        effect: "coverflow",
+        grabCursor: true,
+        centeredSlides: true,
+        slidesPerView: "auto",
+        coverflowEffect: {
+            rotate: 0,
+            stretch: 0,
+            depth: 300,
+            modifier: 1,
+            slideShadows: false,
+        },
+        pagination: {
+            el: ".swiper-pagination",
+        },
+        autoplay: {
+            delay: 3500,
+            disableOnInteraction: false,
+        },
+    });
+
+    function goBack() {
+        window.history.back();
+    }
+</script>
+
+</body>
+</html>

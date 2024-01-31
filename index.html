@@ -8,8 +8,17 @@
 </head>
 <body>
 
-<div class="app">
-  <p id="loading">Loading...</p>
+<div id="loading" class="loading"><div class="middle">
+  <div class="bar bar1"></div>
+  <div class="bar bar2"></div>
+  <div class="bar bar3"></div>
+  <div class="bar bar4"></div>
+  <div class="bar bar5"></div>
+  <div class="bar bar6"></div>
+  <div class="bar bar7"></div>
+  <div class="bar bar8"></div>
+</div></div>
+<div class="app hidden" id="app">
   <img
     id="photo"
     src="images/akankshai.svg"
@@ -20,15 +29,18 @@
   <div id="caption" class="caption hidden">
     <p class="main-text fade-in">Where Expectations Meet Reality</p>
     <p class="sub-text slide-up">Coming Soon...</p>
+    <p class="additional-text fade-in-delay">Till then, meet the minds behind AkankshAI</p>
+    <a href="team.html"><p class="additional-text fade-in-delay">Click here</p></a>
   </div>
 </div>
 
 <script>
-  function handleImageLoad() {
+  setTimeout(function() {
     document.getElementById('loading').style.display = 'none';
+    document.getElementById('app').classList.remove('hidden');
     document.getElementById('photo').classList.remove('hidden');
     document.getElementById('caption').classList.remove('hidden');
-  }
+  }, 1500);
 </script>
 
 </body>

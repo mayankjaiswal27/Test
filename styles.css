@@ -1,63 +1,161 @@
 body {
-    margin: 0;
-    font-family: 'Arial', sans-serif;
-  }
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+}
+
+.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-size: 20px;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.photo {
+  max-width: 100%;
+  max-height: 80vh;
+  transition: opacity 2s ease-in-out; /* Add fade-in animation */
+}
+
+.hidden {
+  display: none;
+}
+
+.caption {
+  margin-top: 0px;
+  text-align: center;
+}
+
+.main-text {
+  font-size: 24px;
+  font-weight: bold;
+  opacity: 0; /* Initial opacity for fade-in animation */
+  animation: fadeIn 2s ease-in-out forwards; /* Add fade-in animation */
+}
+
+.sub-text {
+  font-size: 18px;
+  font-style: italic;
+  color: #888; /* Set a subtle color for sub-text */
+  opacity: 0; /* Initial opacity for slide-up animation */
+  animation: slideUp 2s ease-in-out forwards; /* Add slide-up animation */
+}
+
+.additional-text {
+  font-size: 20px;
+  font-weight: bold;
+  font-family: 'Times New Roman', serif; /* Change font family */
+  color: #333; /* Set color for additional text */
+  opacity: 0; /* Initial opacity for fade-in-delay animation */
+  animation: fadeInDelay 1s ease-in-out 2s forwards; /* Add fade-in-delay animation */
+}
+a:hover{
+  cursor:pointer;
+  text-decoration: none;
   
-  .app {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-  }
+}
+a{
+  cursor:pointer;
   
-  .photo {
-    max-width: 100%;
-    max-height: 80vh;
-    transition: opacity 2s ease-in-out; /* Add fade-in animation */
+}
+
+
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
   }
-  
-  .hidden {
-    display: none;
+  to {
+    opacity: 1;
   }
-  
-  .caption {
-    margin-top: 0px;
-    text-align: center;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
   }
-  
-  .main-text {
-    font-size: 24px;
-    font-weight: bold;
-    opacity: 0; /* Initial opacity for fade-in animation */
-    animation: fadeIn 2s ease-in-out forwards; /* Add fade-in animation */
+  to {
+    transform: translateY(0);
+    opacity: 1;
   }
-  
-  .sub-text {
-    font-size: 18px;
-    font-style: italic;
-    color: #888; /* Set a subtle color for sub-text */
-    opacity: 0; /* Initial opacity for slide-up animation */
-    animation: slideUp 2s ease-in-out forwards; /* Add slide-up animation */
+}
+
+@keyframes fadeInDelay {
+  from {
+    opacity: 0;
   }
-  
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
+  to {
+    opacity: 1;
   }
+}
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
   
-  @keyframes slideUp {
-    from {
-      transform: translateY(20px);
-      opacity: 0;
-    }
-    to {
-      transform: translateY(0);
-      opacity: 1;
-    }
+}
+.middle {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+}
+.bar {
+  width: 10px;
+  height: 70px;
+  background: #fff;
+  display: inline-block;
+  transform-origin: bottom center;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+  /*   box-shadow:5px 10px 20px inset rgba(255,23,25.2); */
+  animation: loader 1.2s linear infinite;
+}
+.bar1 {
+  animation-delay: 0.1s;
+}
+.bar2 {
+  animation-delay: 0.2s;
+}
+.bar3 {
+  animation-delay: 0.3s;
+}
+.bar4 {
+  animation-delay: 0.4s;
+}
+.bar5 {
+  animation-delay: 0.5s;
+}
+.bar6 {
+  animation-delay: 0.6s;
+}
+.bar7 {
+  animation-delay: 0.7s;
+}
+.bar8 {
+  animation-delay: 0.8s;
+}
+
+@keyframes loader {
+  0% {
+    transform: scaleY(0.1);
+    
   }
-  
+  50% {
+    transform: scaleY(1);
+    background: yellowgreen;
+  }
+  100% {
+    transform: scaleY(0.1);
+    background: transparent;
+  }
+}
